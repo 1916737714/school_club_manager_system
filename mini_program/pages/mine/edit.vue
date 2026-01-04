@@ -87,12 +87,12 @@ export default {
     fullAvatar(relOrAbs) {
       if (!relOrAbs) return ''
       if (/^https?:\/\//.test(relOrAbs)) return relOrAbs
-      const apiBase = uni.getStorageSync('BASE_URL') || 'http://localhost:9000/api/v1'
+      const apiBase = uni.getStorageSync('BASE_URL') || 'http://8.138.158.24:9000/api/v1'
       const origin = apiBase.replace(/\/api\/v1$/, '')
       return origin + relOrAbs
     },
     async uploadAvatar(filePath) {
-      const apiBase = uni.getStorageSync('BASE_URL') || 'http://localhost:9000/api/v1'
+      const apiBase = uni.getStorageSync('BASE_URL') || 'http://8.138.158.24:9000/api/v1'
       const url = apiBase.replace(/\/$/, '') + '/upload/image'
       const token = getToken()
       try {

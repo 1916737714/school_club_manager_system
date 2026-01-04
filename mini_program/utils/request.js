@@ -1,4 +1,4 @@
-const BASE_URL = uni.getStorageSync('BASE_URL') || 'http://localhost:9000/api/v1'
+const BASE_URL = uni.getStorageSync('BASE_URL') || 'http://8.138.158.24:9000/api/v1'
 
 export function setToken(t) { uni.setStorageSync('TOKEN', t) }
 export function getToken() { return uni.getStorageSync('TOKEN') }
