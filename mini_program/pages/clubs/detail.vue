@@ -1,6 +1,5 @@
 <template>
   <view class="page">
-、、
     <view class="strip">
       <text class="strip-title">{{ club.name || '未命名社团' }}</text>
     </view>
@@ -142,7 +141,7 @@
   </script>
   
   <style>
-  .page { padding:56px 12px calc(env(safe-area-inset-bottom) + 88px) 12px; background:#f5f5f5; min-height:100vh }
+  .page { padding:12px; background:#f5f5f5; min-height:100vh }
   .nav { position:fixed; left:0; right:0; top:0; height:48px; background:#7e78ff; display:flex; align-items:center; padding:0 12px; z-index:10 }
   .back { width:32px; height:32px; line-height:32px; text-align:center; color:#fff; font-size:18px; }
   .nav-title { flex:1; text-align:center; color:#fff; font-weight:600; }
