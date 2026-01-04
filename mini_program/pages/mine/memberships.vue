@@ -1,6 +1,5 @@
 <template>
   <view class="page">
-    <view class="header"><text class="htitle">我的</text></view>
     <view class="hero">
       <image :src="avatarUrl || defaultAvatar" class="avatar" mode="aspectFill" />
       <text class="uname">{{ profile.name || profile.account || '未登录' }}</text>

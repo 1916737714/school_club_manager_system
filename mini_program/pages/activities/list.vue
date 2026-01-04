@@ -11,13 +11,17 @@
       </view>
       <text v-if="status==='approved'" class="enter" @tap="goClub(it.clubId)">点击进入</text>
     </view>
-    <view v-if="!loading && items.length===0" class="empty">暂无社团</view>
+    <view v-if="!loading && items.length===0" class="empty-container">
+      <text class="empty-text">暂无加入的社团</text>
+      <text class="empty-text">点击下方按钮发现更多精彩社团</text>
+      <button class="empty-btn" @tap="goHome">探索社团</button>
+    </view>
   </view>
 </template>
 
 <script>
 import { request } from '../../utils/request.js'
-import { go } from '../../utils/router.js'
+import { go, switchTo } from '../../utils/router.js'
 export default {
   data() { 
     return { 
@@ -29,6 +33,7 @@ export default {
   },
   onShow() { this.fetch() },
   methods: {
+    goHome() { switchTo('clubsList') },
     switchStatus(s) {
       if (this.status === s) return
       this.status = s
@@ -89,15 +94,18 @@ export default {
 </script>
 
 <style>
-.container { padding:12px; background:#f7f8fa; min-height:100vh }
-.seg { display:flex; gap:12px; align-items:center; margin-bottom:12px; background:#eef0ff; border:1px solid #e6e7fb; border-radius:8px; padding:6px }
+.container { padding:12px; background:#f7f8fa; min-height:100vh; display:flex; flex-direction:column }
+.seg { display:flex; gap:12px; align-items:center; margin-bottom:12px; background:#eef0ff; border:1px solid #e6e7fb; border-radius:8px; padding:6px; flex-shrink:0 }
 .seg-item { flex:1; text-align:center; padding:8px 0; border-radius:6px; color:#666 }
 .seg-item.active { background:#7e78ff; color:#fff; font-weight:600 }
-.row { padding:12px; background:#fff; border:1px solid #e4e6ff; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.04); display:flex; align-items:center; justify-content:space-between; margin-bottom:12px }
+.row { padding:12px; background:#fff; border:1px solid #e4e6ff; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.04); display:flex; align-items:center; justify-content:space-between; margin-bottom:12px; flex-shrink:0 }
 .row:last-child { margin-bottom:0 }
 .info { display:flex; flex-direction:column }
 .title { font-weight:600 }
 .meta { display:block; color:#666; margin-top:4px }
 .enter { color:#7e78ff; font-weight:700 }
 .empty { text-align:center; color:#888; padding:12px }
+.empty-container { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:40px 20px }
+.empty-text { color:#999; font-size:14px; text-align:center; line-height:1.6 }
+.empty-btn { margin-top:20px; background:#7e78ff; color:#fff; font-size:14px; padding:0 30px; border-radius:20px; font-weight:600 }
 </style>

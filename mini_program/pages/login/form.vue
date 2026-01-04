@@ -1,6 +1,5 @@
 <template>
   <view class="page">
-    <view class="header"><text class="htitle">登录</text></view>
     <view class="card">
       <view class="avatar">
         <image src="/static/guet_logo.png" class="avatarimg" mode="aspectFill" />

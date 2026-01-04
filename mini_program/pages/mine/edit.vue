@@ -1,6 +1,5 @@
 <template>
   <view class="page">
-    <view class="header"><text class="htitle">编辑资料</text></view>
     <view class="panel">
       <view class="avatarBox" @tap="chooseAvatar">
         <image :src="avatarUrl || defaultAvatar" class="avatarImg" mode="aspectFill" />
@@ -142,10 +141,10 @@ export default {
 .val { color:#333; flex:1; text-align:right }
 .ipt { border:1px solid #eee; border-radius:8px; padding:6px 8px; text-align:left; background:#fafafa }
 .gender { display:flex; justify-content:flex-end; gap:8px }
-.gbtn { padding:6px 12px; border:1px solid #e0e0ff; border-radius:16px; background:#fff; color:#7e78ff }
+.gbtn { border:1px solid #e0e0ff; border-radius:16px; background:#fff; color:#7e78ff }
 .on { background:#e9e7ff }
-.btnrow { display:flex; gap:10px; margin-top:16px }
-.save, .cancel { flex:1; border-radius:24px; padding:10px 0; color:#fff }
+.btnrow { display:flex; gap:6px; margin-top:16px }
+.save, .cancel { flex:1; border-radius:24px; color:#fff }
 .save { background:#7e78ff }
 .cancel { background:#999 }
 </style>

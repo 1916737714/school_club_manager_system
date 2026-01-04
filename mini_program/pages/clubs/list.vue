@@ -1,6 +1,5 @@
 <template>
   <view class="container">
-    <view class="header"><text class="htitle">首页</text></view>
     <view class="filters">
       <input class="search" placeholder="搜索社团" v-model="keyword" @confirm="doSearch" />
       <scroll-view class="chips" scroll-x>
