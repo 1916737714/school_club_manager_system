@@ -1,8 +1,6 @@
 <template>
   <view class="page">
-    <view class="nav">
-      <text class="nav-title">社团详情</text>
-    </view>
+、、
     <view class="strip">
       <text class="strip-title">{{ club.name || '未命名社团' }}</text>
     </view>

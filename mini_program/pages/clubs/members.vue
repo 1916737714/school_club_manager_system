@@ -1,6 +1,5 @@
 <template>
   <view class="page">
-    <view class="header"><text class="htitle">成员列表</text></view>
     <view class="list">
       <view v-for="u in list" :key="u.id" class="row">
         <text class="title">{{ u.name }}</text>

@@ -1,6 +1,5 @@
 <template>
   <view class="page">
-    <view class="header"><text class="htitle">活动详情</text></view>
   <view class="card">
       <text class="title">{{ subject || '活动' }}</text>
       <view class="row">

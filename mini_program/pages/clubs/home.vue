@@ -1,6 +1,5 @@
 <template>
   <view class="page">
-    <view class="header"><text class="htitle">社团主页</text></view>
     <view class="hero">
       <image :src="club.logo || defaultCover" class="cover" mode="aspectFill" />
       <view class="overlay">

@@ -1,6 +1,5 @@
 <template>
   <view class="page">
-    <view class="header"><text class="htitle">考勤</text></view>
     <view class="list">
       <view v-for="it in list" :key="it.id" class="row">
         <view class="col">

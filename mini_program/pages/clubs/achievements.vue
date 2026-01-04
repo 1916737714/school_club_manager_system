@@ -1,6 +1,5 @@
 <template>
   <view class="page">
-    <view class="header"><text class="htitle">成果展示</text></view>
     <view class="list">
       <view class="empty">暂未开放</view>
     </view>
